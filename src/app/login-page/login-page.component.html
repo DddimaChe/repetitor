@@ -1,0 +1,50 @@
+<div class="all-login">
+<div class="form">
+  <div class="login">
+  <h1>Войти в кабинет</h1>
+
+  <form class="card" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="field-wrap">
+      <input formControlName="email" class="login-user-input-email login-user-input" name="email"
+             placeholder="Your Email Address" type="email"
+             [ngClass]="{'invalid': form.get('email').invalid && form.get('email').touched}">
+      <span *ngIf="form.get('email').invalid && form.get('email').touched">
+        <span *ngIf="form.get('email').errors['required']">Email не должен быть пустым</span>
+        <span *ngIf="form.get('email').errors['email']">Email должен быть корректным</span>
+              </span>
+    </div>
+
+    <div class="field-wrap">
+      <input type="password" class="login-user-input-password  login-user-input" name="password"
+             placeholder="Enter Password" formControlName="password"
+             autocomplete="off"
+             [ngClass]="{'invalid': form.get('password').invalid && form.get('password').touched}">
+      <span *ngIf="form.get('password').invalid && form.get('password').touched">
+        <span *ngIf="form.get('password').errors['required']">Password не должен быть пустым</span>
+      </span>
+    </div>
+
+    <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+    <button type="submit" class="action" [disabled]="form.invalid">Войти</button>
+
+    <button class="login-google" id="gPlusLogin" (click)="socialLogin('google')">
+      <span class="header-sprite login-gplus-logo"></span>
+      GOOGLE
+    </button>
+
+  </form>
+
+  </div>
+
+
+</div>
+
+<div class="createacc">
+  <div class="login-right-links">
+    <h2 class="text-default">For New User</h2>
+      <a class="button" [routerLink]="['/registration']">Create Account</a>
+  </div>
+</div>
+</div>

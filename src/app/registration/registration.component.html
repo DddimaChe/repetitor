@@ -1,0 +1,76 @@
+<div class="all-register">
+  <div class="form">
+    <div class="login">
+    <h1>Sign Up</h1>
+
+    <form class="card" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div class="top-row">
+
+        <div class="field-wrap">
+          <input  formControlName="firstname" class="" name="firstname" placeholder="firstname"
+                  type="text"
+                  [ngClass]="{'invalid': form.get('firstname').invalid && form.get('firstname').touched}">
+          <span *ngIf="form.get('firstname').invalid && form.get('firstname').touched">
+        <span *ngIf="form.get('firstname').errors['required']">Имя не должен быть пустым</span>
+          </span>
+        </div>
+
+        <div class="field-wrap">
+          <input  formControlName="lastname" class="" name="lastname" placeholder="lastname"
+                  type="text"
+                  [ngClass]="{'invalid': form.get('lastname').invalid && form.get('lastname').touched}">
+          <span *ngIf="form.get('lastname').invalid && form.get('lastname').touched">
+        <span *ngIf="form.get('lastname').errors['required']">Фамилия не должен быть пустым</span>
+          </span>
+        </div>
+
+        <div class="field-wrap">
+          <input type="text" class="login-user-input-password  login-user-input" name="otchestvo"
+                 placeholder="otchestvo" formControlName="otchestvo"
+                 autocomplete="off"
+                 [ngClass]="{'invalid': form.get('otchestvo').invalid && form.get('otchestvo').touched}">
+          <span *ngIf="form.get('otchestvo').invalid && form.get('otchestvo').touched">
+        <span *ngIf="form.get('otchestvo').errors['required']">Отчество не должен быть пустым</span>
+      </span>
+        </div>
+
+      </div>
+
+      <div class="field-wrap">
+        <input formControlName="email" class="login-user-input-email login-user-input" name="email"
+               placeholder="Your Email Address" type="email"
+               [ngClass]="{'invalid': form.get('email').invalid && form.get('email').touched}">
+        <span *ngIf="form.get('email').invalid && form.get('email').touched">
+        <span *ngIf="form.get('email').errors['required']">Email не должен быть пустым</span>
+        <span *ngIf="form.get('email').errors['email']">Email должен быть корректным</span>
+              </span>
+      </div>
+
+      <div class="field-wrap">
+        <input type="password" class="login-user-input-password  login-user-input" name="password"
+               placeholder="Enter Password" formControlName="password"
+               autocomplete="off"
+               [ngClass]="{'invalid': form.get('password').invalid && form.get('password').touched}">
+        <span *ngIf="form.get('password').invalid && form.get('password').touched">
+        <span *ngIf="form.get('password').errors['required']">Password не должен быть пустым</span>
+      </span>
+      </div>
+
+      <div class="field-wrap">
+        <input type="text" class="" name="phone"
+               placeholder="Phone" formControlName="phone"
+               autocomplete="off"
+               [ngClass]="{'invalid': form.get('phone').invalid && form.get('phone').touched}">
+        <span *ngIf="form.get('phone').invalid && form.get('password').touched">
+        <span *ngIf="form.get('phone').errors['required']">Поле с телефоном не должно быть пустым</span>
+        <span *ngIf="form.get('phone').errors['pattern']">Поле может содержать только цифры</span>
+      </span>
+      </div>
+
+
+      <button type="submit" class="action" [disabled]="form.invalid">Войти</button>
+    </form>
+  </div>
+</div>
+</div>

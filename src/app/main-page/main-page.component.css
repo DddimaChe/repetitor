@@ -1,0 +1,36 @@
+header{
+  display: flex;
+  justify-content: flex-end;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  background: white;
+  height: 50px;
+  width: 75%;
+  min-width: 100px;
+  padding: 20px 10px;
+  box-shadow: 5px 1px 5px 2px  darkgrey;
+}
+
+nav[role="navigation"] {
+  display: flex;
+  justify-content: flex-end;
+  align-content: space-between;
+}
+
+nav[role="navigation"] a {
+  text-decoration: none;
+  color: black;
+  padding: 1px 15px;
+  font-size: 20px;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+
+
