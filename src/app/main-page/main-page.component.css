@@ -5,7 +5,7 @@
 
 main {
   display: flex;
-  flex-direction: row;
+
 }
 .sidebar-menu-wrapper {
   height: 1000px;
@@ -16,10 +16,17 @@ main {
 .sidenav{
   display: flex;
   flex-direction: column;
+  margin: 15px 5px 15px 15px;
+}
+
+li{
+  margin: 15px 0 15px 0;
+  text-decoration:none;
 }
 
 .page-content-wrapper{
-
+  display: flex;
+  flex-direction: column;
   width: 80%;
 }
 
