@@ -1,4 +1,18 @@
-<header>
+<main>
+<section class="sidebar-menu-wrapper">
+  <ul class="sidenav">
+    <li routerLinkActive="active" class=""><a routerLink ="/" class="">Главная</a> </li>
+    <li routerLinkActive="active" class=""><a routerLink="/tutors" class="">Репетиторы</a> </li>
+    <li routerLinkActive="active" class=""><a routerLink="/services" class="">Заказать услуги репетитора</a> </li>
+    <li routerLinkActive="active" class=""><a routerLink="/reviews" class="">Отзывы о репетиторах</a> </li>
+    <hr>
+    <li routerLinkActive="active" class=""><a routerLink="/contacts" class="">Наши контакты</a> </li>
+    <li routerLinkActive="active" class=""><a routerLink="/jobs" class="">Вакансии для репетиторов</a> </li>
+    <li routerLinkActive="active" class=""><a routerLink="/about" class="">О нас</a> </li>
+  </ul>
+</section>
+
+<header class="page-content-wrapper">
   <div class="header" role="banner">
     <nav role="navigation">
       <ul>
@@ -11,5 +25,20 @@
       </ul>
     </nav>
   </div>
+
+  <main>
+    <div>
+      <span>Найти репетитора в вашем районе или городе очень просто! Выберите предмет и ваш город:</span>
+    </div>
+  </main>
+
 </header>
-<router-outlet></router-outlet>
+
+  <router-outlet></router-outlet>
+
+</main>
+
+
+
+
+
