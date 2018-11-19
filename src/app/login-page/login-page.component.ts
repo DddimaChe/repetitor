@@ -16,7 +16,8 @@ export class LoginPageComponent implements OnInit, OnDestroy {
 
   constructor(private  auth: AuthService,
               private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -41,13 +42,21 @@ export class LoginPageComponent implements OnInit, OnDestroy {
 
   onSubmit() {
     this.form.disable();
-   this.isSub =  this.auth.login(this.form.value)
-    .subscribe(
-      () => this.router.navigate(['/profile']),
-      error => {
-        console.log(error);
-        this.form.enable();
-      }
-    );
+    this.isSub = this.auth.login(this.form.value)
+      .subscribe(
+        res => {
+          const result = +res;
+          if (result === 0) {
+            this.router.navigate(['/']);
+            this.auth.logInUser();
+          } else if (result === 1 || result === 2) {
+            console.log();
+          }
+        },
+        error => {
+          console.log(error);
+          this.form.enable();
+        }
+      );
   }
 }

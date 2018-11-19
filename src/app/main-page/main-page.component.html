@@ -1,36 +1,59 @@
 <main>
 <section class="sidebar-menu-wrapper">
   <ul class="sidenav">
-    <li routerLinkActive="active" class=""><a routerLink ="/" class="">Главная</a> </li>
-    <li routerLinkActive="active" class=""><a routerLink="/tutors" class="">Репетиторы</a> </li>
-    <li routerLinkActive="active" class=""><a routerLink="/services" class="">Заказать услуги репетитора</a> </li>
-    <li routerLinkActive="active" class=""><a routerLink="/reviews" class="">Отзывы о репетиторах</a> </li>
+    <li routerLink ="/" class="li1" (click)="peremennay = true"><a class="">Главная</a> </li>
+    <li routerLink="/tutors" class="li1" (click)="peremennay = false"><a class="">Репетиторы</a> </li>
+    <li routerLink="/services" class="li1" (click)="peremennay = false"><a class="">Заказать услуги репетитора</a> </li>
+    <li routerLink="/reviews" class="li1" (click)="peremennay = false"><a class="">Отзывы о репетиторах</a> </li>
     <hr>
-    <li routerLinkActive="active" class=""><a routerLink="/contacts" class="">Наши контакты</a> </li>
-    <li routerLinkActive="active" class=""><a routerLink="/jobs" class="">Вакансии для репетиторов</a> </li>
-    <li routerLinkActive="active" class=""><a routerLink="/about" class="">О нас</a> </li>
+    <li routerLink="/contacts" class="li1" (click)="peremennay = false"><a class="">Наши контакты</a> </li>
+    <li routerLink="/jobs" class="li1" (click)="peremennay = false"><a class="">Вакансии для репетиторов</a> </li>
+    <li routerLink="/about" class="li1" (click)="peremennay = false"><a class="">О нас</a> </li>
   </ul>
 </section>
 
-<header class="page-content-wrapper">
+<div class="page-content-wrapper">
+  <header>
   <div class="header" role="banner">
     <nav role="navigation">
       <ul>
-        <li routerLinkActive="active">
+        <li routerLinkActive="active" (click)="peremennay = false">
           <a routerLink="/registration">Регистрация для репетиторов</a>
         </li>
-        <li routerLinkActive="active">
+        <li routerLinkActive="active" (click)="peremennay = false">
           <a routerLink="/login">Вход</a>
         </li>
       </ul>
     </nav>
   </div>
+  </header>
 
 
-</header>
+  <div class="all-search" *ngIf="peremennay">
+
+  <section class="form">
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </section>
+
+  </div>
 
   <router-outlet></router-outlet>
-
+</div>
 </main>
 
 

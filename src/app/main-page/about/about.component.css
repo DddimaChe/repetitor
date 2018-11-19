@@ -9,10 +9,35 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 100px;
-  padding-bottom: 100px;
+  margin: 50px 10px 0 20px;
 
 }
 .site{
   font-size: 26px;
+  text-align: center;
 }
+
+.how_work {
+  font-size: 26px;
+  text-align: center;
+}
+
+.req {
+  font-size: 20px;
+}
+
+.manager_span {
+  font-size: 20px;
+}
+
+.img_req {
+  width: 200px;
+  height: 200px;
+}
+
+.img_manager {
+  width: 200px;
+  height: 200px;
+}
+
+

@@ -1,37 +1,37 @@
+<main>
 <div class="all-register">
   <div class="form">
     <div class="login">
-    <h1>Sign Up</h1>
 
-    <form class="card" [formGroup]="form" (ngSubmit)="onSubmit()">
-
+    <form class="box" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h1>Sign Up</h1>
       <div class="top-row">
 
         <div class="field-wrap">
-          <input  formControlName="firstname" class="" name="firstname" placeholder="firstname"
+          <input  formControlName="firstName" class="" name="firstName" placeholder="firstname"
                   type="text"
-                  [ngClass]="{'invalid': form.get('firstname').invalid && form.get('firstname').touched}">
-          <span *ngIf="form.get('firstname').invalid && form.get('firstname').touched">
-        <span *ngIf="form.get('firstname').errors['required']">Имя не должен быть пустым</span>
+                  [ngClass]="{'invalid': form.get('firstName').invalid && form.get('firstName').touched}">
+          <span *ngIf="form.get('firstName').invalid && form.get('firstName').touched">
+        <span *ngIf="form.get('firstName').errors['required']">Имя не должен быть пустым</span>
           </span>
         </div>
 
         <div class="field-wrap">
-          <input  formControlName="lastname" class="" name="lastname" placeholder="lastname"
+          <input  formControlName="lastName" class="" name="lastName" placeholder="lastName"
                   type="text"
-                  [ngClass]="{'invalid': form.get('lastname').invalid && form.get('lastname').touched}">
-          <span *ngIf="form.get('lastname').invalid && form.get('lastname').touched">
-        <span *ngIf="form.get('lastname').errors['required']">Фамилия не должен быть пустым</span>
+                  [ngClass]="{'invalid': form.get('lastName').invalid && form.get('lastName').touched}">
+          <span *ngIf="form.get('lastName').invalid && form.get('lastName').touched">
+        <span *ngIf="form.get('lastName').errors['required']">Фамилия не должен быть пустым</span>
           </span>
         </div>
 
         <div class="field-wrap">
-          <input type="text" class="login-user-input-password  login-user-input" name="otchestvo"
-                 placeholder="otchestvo" formControlName="otchestvo"
+          <input type="text" class="login-user-input-password  login-user-input" name="city"
+                 placeholder="city" formControlName="city"
                  autocomplete="off"
-                 [ngClass]="{'invalid': form.get('otchestvo').invalid && form.get('otchestvo').touched}">
-          <span *ngIf="form.get('otchestvo').invalid && form.get('otchestvo').touched">
-        <span *ngIf="form.get('otchestvo').errors['required']">Отчество не должен быть пустым</span>
+                 [ngClass]="{'invalid': form.get('city').invalid && form.get('city').touched}">
+          <span *ngIf="form.get('city').invalid && form.get('city').touched">
+        <span *ngIf="form.get('city').errors['required']">Отчество не должен быть пустым</span>
       </span>
         </div>
 
@@ -39,7 +39,7 @@
 
       <div class="field-wrap">
         <input formControlName="email" class="login-user-input-email login-user-input" name="email"
-               placeholder="Your Email Address" type="email"
+               placeholder="Your Email Address" type="text"
                [ngClass]="{'invalid': form.get('email').invalid && form.get('email').touched}">
         <span *ngIf="form.get('email').invalid && form.get('email').touched">
         <span *ngIf="form.get('email').errors['required']">Email не должен быть пустым</span>
@@ -57,16 +57,6 @@
       </span>
       </div>
 
-      <div class="field-wrap">
-        <input type="text" class="" name="phone"
-               placeholder="Phone" formControlName="phone"
-               autocomplete="off"
-               [ngClass]="{'invalid': form.get('phone').invalid && form.get('phone').touched}">
-        <span *ngIf="form.get('phone').invalid && form.get('password').touched">
-        <span *ngIf="form.get('phone').errors['required']">Поле с телефоном не должно быть пустым</span>
-        <span *ngIf="form.get('phone').errors['pattern']">Поле может содержать только цифры</span>
-      </span>
-      </div>
 
 
       <button type="submit" class="action" [disabled]="form.invalid">Войти</button>
@@ -74,3 +64,4 @@
   </div>
 </div>
 </div>
+</main>

@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../services/auth.service';
 import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-registration',
@@ -15,16 +16,16 @@ export class RegistrationComponent implements OnInit, OnDestroy {
   isSub: Subscription;
 
   constructor(private auth: AuthService,
-              private router: Router) { }
+              private router: Router,
+              private http: HttpClient) { }
 
   ngOnInit() {
     this.form = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required]),
-      firstname: new FormControl(null, [Validators.required]),
-      lastname: new FormControl(null, [Validators.required]),
-      otchestvo: new FormControl(null, [Validators.required]),
-      phone: new FormControl('+' + 380, [Validators.required, Validators.pattern('[0-9]{0-10}')])
+      firstName: new FormControl(null, [Validators.required]),
+      lastName: new FormControl(null, [Validators.required]),
+      city: new FormControl(null, [Validators.required]),
     });
   }
 

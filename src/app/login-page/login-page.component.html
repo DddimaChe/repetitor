@@ -1,13 +1,12 @@
+<main>
 <div class="all-login">
 <div class="form">
   <div class="login">
-  <h1>Войти в кабинет</h1>
-
-  <form class="card" [formGroup]="form" (ngSubmit)="onSubmit()">
-
+  <form class="box" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h1>Войти в кабинет</h1>
     <div class="field-wrap">
       <input formControlName="email" class="login-user-input-email login-user-input" name="email"
-             placeholder="Your Email Address" type="email"
+             placeholder="Your Email Address" type="text"
              [ngClass]="{'invalid': form.get('email').invalid && form.get('email').touched}">
       <span *ngIf="form.get('email').invalid && form.get('email').touched">
         <span *ngIf="form.get('email').errors['required']">Email не должен быть пустым</span>
@@ -29,10 +28,6 @@
 
     <button type="submit" class="action" [disabled]="form.invalid">Войти</button>
 
-    <button class="login-google" id="gPlusLogin" (click)="socialLogin('google')">
-      <span class="header-sprite login-gplus-logo"></span>
-      GOOGLE
-    </button>
 
   </form>
 
@@ -41,10 +36,6 @@
 
 </div>
 
-<div class="createacc">
-  <div class="login-right-links">
-    <h2 class="text-default">For New User</h2>
-      <a class="button" [routerLink]="['/registration']">Create Account</a>
-  </div>
+
 </div>
-</div>
+</main>

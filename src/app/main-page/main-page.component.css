@@ -5,29 +5,45 @@
 
 main {
   display: flex;
+  background-color: gray;
 
 }
 .sidebar-menu-wrapper {
   height: 1000px;
-  width: 20%;
+  width: 21%;
   background-color: #1ab188;
 }
 
 .sidenav{
   display: flex;
   flex-direction: column;
-  margin: 15px 5px 15px 15px;
+  margin: 0;
+  padding: 0;
+
 }
 
-li{
-  margin: 15px 0 15px 0;
-  text-decoration:none;
+.li1{
+  cursor: pointer;
+  margin: 15px 0 15px 5px;
 }
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.li1:hover {
+  color: white;
+  font-weight: bold;
+}
+
+
 
 .page-content-wrapper{
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 79%;
 }
 
 .header {
@@ -48,7 +64,7 @@ nav[role="navigation"] {
 nav[role="navigation"] a {
   text-decoration: none;
   color: black;
-  padding: 1px 15px;
+  padding: 0 15px;
   font-size: 20px;
   display: inline-block;
 }
@@ -57,6 +73,81 @@ ul {
   list-style: none;
   display: flex;
 }
+
+
+.all-search{
+  display: flex;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+  padding: 60px;
+  width: 65%;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.naiti_rep{
+  display: flex;
+  justify-content: center;
+}
+input,textarea{
+  font-size: 22px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  border-radius: 0;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.wrap-search {
+  position: relative;
+}
+
+.btn-search{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  margin: 10px 0 0 0;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+button:hover, .button:focus {
+  background: #179b77;
+}
+
+
+
 
 
 

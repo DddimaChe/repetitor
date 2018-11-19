@@ -1,4 +1,4 @@
-a {
+/*a {
   text-decoration: none;
   color: #1ab188;
   transition: .5s ease;
@@ -125,5 +125,66 @@ button:hover, .button:focus {
   display: block;
   width: 100%;
 }
+*/
+main {
+  margin: 0;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+
+}
+.box {
+  width: 400px;
+  padding: 40px;
+  background: #191919;
+  text-align: center;
+}
+.box h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"], .box input[type = "password"] {
+  border: 0;
+  background: none;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus, .box input[type = "password"]:focus {
+  width: 280px;
+  border-color: #2ecc71;
+}
+button[type = "submit"] {
+  border: 0;
+  background: none;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+button[type = "submit"]:hover {
+  background: #2ecc71;
+}
+
+span {
+  color: white;
+}
+
 
 
