@@ -18,6 +18,8 @@ import { ReviewsComponent } from './main-page/reviews/reviews.component';
 import { ContactsComponent } from './main-page/contacts/contacts.component';
 import { JobsComponent } from './main-page/jobs/jobs.component';
 import { AboutComponent } from './main-page/about/about.component';
+import { UserComponent } from './user/user.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { AboutComponent } from './main-page/about/about.component';
     ReviewsComponent,
     ContactsComponent,
     JobsComponent,
-    AboutComponent
+    AboutComponent,
+    UserComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

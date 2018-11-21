@@ -47,7 +47,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
         res => {
           const result = +res;
           if (result === 0) {
-            this.router.navigate(['/']);
+            this.router.navigate(['/user']);
             this.auth.logInUser();
           } else if (result === 1 || result === 2) {
             console.log();

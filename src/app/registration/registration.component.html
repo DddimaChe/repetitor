@@ -12,7 +12,7 @@
                   type="text"
                   [ngClass]="{'invalid': form.get('firstName').invalid && form.get('firstName').touched}">
           <span *ngIf="form.get('firstName').invalid && form.get('firstName').touched">
-        <span *ngIf="form.get('firstName').errors['required']">Имя не должен быть пустым</span>
+        <span *ngIf="form.get('firstName').errors['required']">Имя не должено быть пустым</span>
           </span>
         </div>
 
@@ -21,7 +21,7 @@
                   type="text"
                   [ngClass]="{'invalid': form.get('lastName').invalid && form.get('lastName').touched}">
           <span *ngIf="form.get('lastName').invalid && form.get('lastName').touched">
-        <span *ngIf="form.get('lastName').errors['required']">Фамилия не должен быть пустым</span>
+        <span *ngIf="form.get('lastName').errors['required']">Фамилия не должна быть пустой</span>
           </span>
         </div>
 

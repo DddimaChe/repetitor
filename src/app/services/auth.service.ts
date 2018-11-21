@@ -19,6 +19,17 @@ export class AuthService {
     this.isLogged = false;
   }
 
+  checkAuth(res) {
+    const result = +res;
+    if (result === 0) {
+      this.router.navigate(['/']);
+      this.auth.logInUser();
+    } else if (result === 1 || result === 2) {
+      console.log();
+    }
+  }
+
+
   login(user: User): Observable<any> {
     return this.http.post<any>(`${this.url}/teacher/login/`, user)
       .pipe(
@@ -27,6 +38,7 @@ export class AuthService {
         )
       );
   }
+
 
   register(user: User): Observable<any> {
     return this.http.post<User>(`${this.url}/teacher/registration/`, user)

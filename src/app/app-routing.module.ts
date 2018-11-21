@@ -9,6 +9,9 @@ import {ReviewsComponent} from './main-page/reviews/reviews.component';
 import {ContactsComponent} from './main-page/contacts/contacts.component';
 import {JobsComponent} from './main-page/jobs/jobs.component';
 import {AboutComponent} from './main-page/about/about.component';
+import {UserComponent} from './user/user.component';
+import {AuthGuard} from './guard/auth.guard';
+import {MainComponent} from './main/main.component';
 
 
 const routes: Routes = [
@@ -22,7 +25,12 @@ const routes: Routes = [
       {path: 'contacts', component: ContactsComponent},
       {path: 'jobs', component: JobsComponent},
       {path: 'about', component: AboutComponent},
+      {path: '/', component: MainComponent}
     ]
+  },
+
+  {
+    path: 'user', component: UserComponent, canActivate: [AuthGuard],
   }
 ];
 

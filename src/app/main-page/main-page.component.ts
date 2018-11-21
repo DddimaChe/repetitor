@@ -28,7 +28,7 @@ export class MainPageComponent implements OnInit {
   constructor(private searchService: SearchService) { }
 
   ngOnInit() {
-    this.loadCities();
+
 
 
   }
@@ -40,7 +40,7 @@ export class MainPageComponent implements OnInit {
 
   }
 
-  loadCities() {
+  /*loadCities() {
     this.searchService.getCities()
       .subscribe(res => {
         this.cities = res['data'];
@@ -48,6 +48,7 @@ export class MainPageComponent implements OnInit {
         this.filteredCities.splice(10);
       });
   }
+  */
 
   filterCities(data) {
     const temp = this.cities.slice();

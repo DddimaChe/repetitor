@@ -22,9 +22,13 @@ export class SearchService {
   constructor(private http: HttpClient) {}
 
 
-  getCities() {
-    return this.http.post<City>(this.url);
-  }
+    searchTeacher() {
+      return this.http.get('/')
+        .pipe(
+
+        )
+    }
+
 
 
 }

@@ -39,12 +39,17 @@ export class RegistrationComponent implements OnInit, OnDestroy {
     this.form.disable();
     this.isSub = this.auth.register(this.form.value)
       .subscribe(
-        () => {
-          this.router.navigate(['/'], {
-            queryParams: {
-              registered: true
-            }
-          });
+        (res) => {
+          const result = +res;
+          if (res === 0) {
+            this.router.navigate(['/user'], {
+              queryParams: {
+                registered: true
+              }
+            });
+          } else if (result === 1 || result === 2) {
+            console.log();
+          }
         },
         error => {
           console.log(error);
